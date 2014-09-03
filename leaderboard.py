@@ -12,7 +12,6 @@ leaderboard = agg.groupby(['Demo']).aggregate(sum)
 leaderboard_sorted = leaderboard.sort(['quant'], ascending=[0])
 
 
-
 bar = vincent.Bar(leaderboard_sorted)
 bar.to_json('bar.json', html_out=True, html_path='index.html')
 
